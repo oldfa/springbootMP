@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zhshhypt.mapper.TeachMapper">
+    <select id="selectList" resultType="com.zhshhypt.pojo.Teach">
+        select * from tb_teach
+    </select>
+   <!-- <select id="selectById" resultType="com.zhshhypt.pojo.Teach">
+        select * from tb_teach where teach_id=#{teach_id}
+    </select>-->
+</mapper>
