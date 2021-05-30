@@ -47,7 +47,11 @@ public class UserController extends BaseControl {
         User user = iUserService.selectById("23432");
         return user;
     }
+
+
     /**
+     *
+     * 代发查封大
      * @Description:用户添加信息
      * @params: [response, request]
      * @return: void
