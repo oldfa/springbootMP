@@ -41,5 +41,26 @@ public class UserController {
         User user = iUserService.selectById("23432");
         return user;
     }
+    
+     @RequestMapping(value ="/InserLine")
+    public void InsertData(HttpServletResponse response, HttpServletRequest request){
+        JSONObject ret=new JSONObject();
+        User user= null;
+        try {
+            user = new User();
+            
+            iTeachService.insert(user);
+            ret.put("code", RETCODE.R200);
+            ret.put("msg","插入成功...");
+        } catch (Exception e) {
+            e.printStackTrace();
+            ret.put("code",RETCODE.R400);
+            ret.put("msg",e.getMessage());
+        }
+
+        write(response,ret.toString());
+
+
+    }
 
 }
